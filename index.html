@@ -19,16 +19,22 @@
   <script>
     (function(){
       function getWidth(){
+
+        // 获取html  dom节点
         var html = document.querySelector('html')
+
+         // 获取屏幕宽度
         var width = html.clientWidth
         console.log(width);
 
+        // 设置 html 的基准值 ， 平均分为20份
         html.style.fontSize = width / 20 + 'px'
       }
-      getWidth()
+        getWidth()
 
+      // 当页面发生改变时   设置对应的 html 基准值
       window.onresize =function (){
-      getWidth()
+        getWidth()
       }
 
     })()
