@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      /* 宽 16px */
+      width: 0.5rem; 
+      /* 高 16px */
+      height: 0.5rem;
+      background-color: pink;
+    }
+  </style>
+</head>
+<body>
+  <div class="box"></div>
+  <script>
+    (function(){
+      function getWidth(){
+        var html = document.querySelector('html')
+        var width = html.clientWidth
+        console.log(width);
+
+        html.style.fontSize = width / 20 + 'px'
+      }
+      getWidth()
+
+      window.onresize =function (){
+      getWidth()
+      }
+
+    })()
+
+
+
+  </script>
+</body>
+</html>
